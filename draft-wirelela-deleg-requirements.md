@@ -98,7 +98,7 @@ The following strictures are necessary in a new delegation design.
 * DELEG must not negatively impact most DNS software.  This is intentionally a bit vague with regard to "most", because it can't be absolutely guaranteed for all possible DNS software on the network.  However, the working group should strive to test any proposed mechanism against a wide range of legacy software and come to a consensus as to what constitutes adherence to this requirement.
 
 
-* DELEG must be able to secure delegations with DNSSEC.  Ideally it should be able to convey an even stronger security model for delegations than currently exists.
+* DELEG must be able to secure delegations with DNSSEC.
 
 * DELEG must support updates to delegation information with the same relative ease as currently exists with NS records.   Changes should take the same amount of time (eg, controlled by a DNS TTL) and allow a smooth transition between different operational platforms.
 
@@ -131,6 +131,10 @@ The following items are the aspirational goals for this work, describing the fea
 
 
 * DELEG should support an in-band means for the child to signal to the parent that parent-side records related to the child should be updated, akin to CDS/CDNSKEY {{?RFC8078}}.
+
+
+* DELEG should be able to convey a security model for delegations stronger than currently exists with DNSSEC.
+
 
 ## Non-Requirements
 
