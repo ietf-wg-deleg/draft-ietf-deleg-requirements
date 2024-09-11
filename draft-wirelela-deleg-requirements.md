@@ -59,18 +59,15 @@ Various mechanisms have been proposed for communicating additional information a
 This document assumes familiarity with DNS terms as defined in {{?BCP219}}.    Additionally, the following new terms are introduced:
 
 
-{:vspace}
-DELEG
+DELEG:
 : A new method of DNS delegation, matching the requirements in this document but not presuming any particular mechanism, including previous specific proposals that used this name
 
 
-{:vspace}
-Zone Operator
+Zone Operator:
 : The person or organization responsible for the nameserver which serves the zone
 
 
-{:vspace}
-Service Access Point
+Service Access Point:
 : The network address tuple at which a zone is served
 
 
