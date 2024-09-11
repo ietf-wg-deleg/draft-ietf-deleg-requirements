@@ -45,7 +45,7 @@ Authoritative control of parts of the Domain Name System namespace are indicated
 # Introduction
 
 
-In the Domain Name System {{?STD13}}, subtrees within the domain name hierarchy are indicated by delegations to servers which are authoritative for their portion of the namespace.  The DNS records that do this, called NS records, can only represent the name of a nameserver.  In practice, clients can expect nothing out of this delegated server other than that it will answer DNS requests on UDP port 53.
+In the Domain Name System {{?STD13}}, subtrees within the domain name hierarchy are indicated by delegations to servers which are authoritative for their portion of the namespace.  The DNS records that do this, called NS records, can only represent the name of a nameserver.  In practice, clients can expect nothing out of this delegated server other than that it will answer DNS requests on UDP and TCP port 53.
 
 
 As the DNS has evolved over the past four decades, this has proven to be a barrier for the efficient introduction of new DNS technology, particularly for interacting with servers other than via UDP or TCP on port 53.  Many features that have been conceived come with additional overhead as they are limited by this least common denominator of nameserver functionality.
