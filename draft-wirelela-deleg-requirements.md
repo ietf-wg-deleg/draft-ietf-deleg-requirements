@@ -63,11 +63,11 @@ DELEG:
 : A new method of DNS delegation, matching the requirements in this document but not presuming any particular mechanism, including previous specific proposals that used this name
 
 
-Zone Operator:
+zone operator:
 : The person or organization responsible for the nameserver which serves the zone
 
 
-Service Access Point:
+service access point:
 : The network address tuple at which a zone is served
 
 
@@ -115,7 +115,7 @@ The following items are the aspirational goals for this work, describing the fea
 * DELEG should facilitate the use of new DNS transport mechanisms, including those already defined by DNS-over-TLS (DoT {{?RFC7858}}), DNS-over-HTTPS (DoH {{?RFC8484}}), and DNS-over-QUIC (DoQ {{?RFC9520}}).  It should easily allow the adoption of new transport mechanisms.
 
 
-* DELEG should make clear all of the necessary details for contacting a Service Access Point -- its protocol, port, and any other data that would be required to initiate a DNS query.
+* DELEG should make clear all of the necessary details for contacting a service access point -- its protocol, port, and any other data that would be required to initiate a DNS query.
 
 
 * DELEG should minimize transaction cost in its usage.  This includes, but is not limited to, packet count, packet volume, and the amount of time it takes to resolve a query.
@@ -124,7 +124,7 @@ The following items are the aspirational goals for this work, describing the fea
 * DELEG should enable a DNS operator to manage DNS service more completely on behalf of domain administrators. For example, DELEG could address long-standing issues of DNSSEC record maintenance that now often depend on registrant / registrar interaction. Similarly, DELEG could allow new transports to be deployed by an operator or nameserver names to be changed, without necessitating that delegation information be modified by the domain administrator.
 
 
-* DELEG should allow for backward compatibility to the conventional NS-based delegation mechanism.  That is, a Zone Operator who wants to maintain a single source of truth of delegation information using DELEG should be able to easily have Do53 delegations derived from it.
+* DELEG should allow for backward compatibility to the conventional NS-based delegation mechanism.  That is, a zone operator who wants to maintain a single source of truth of delegation information using DELEG should be able to easily have Do53 delegations derived from it.
 
 
 * DELEG should be easily extensible, much like Extension Mechanisms for DNS {{?RFC6891}}, allowing for the incremental addition of new parameters without needing all of the heavy lifting that is expected for the initial deployment.
