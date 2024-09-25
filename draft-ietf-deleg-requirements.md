@@ -3,7 +3,7 @@ title: "Problem Statement and Requirements for an Improved DNS Delegation Mechan
 abbrev: "DELEG Requirements "
 category: info
 
-docname: draft-wirelela-deleg-requirements-latest
+docname: draft-ietf-deleg-requirements-latest
 submissiontype: IETF  # also: "independent", "editorial", "IAB", or "IRTF"
 keyword: Internet-Draft
 stand_alone: true
@@ -127,7 +127,7 @@ The following items are the aspirational goals for this work, describing the fea
 * DELEG should allow for backward compatibility to the conventional NS-based delegation mechanism.  That is, a zone operator who wants to maintain a single source of truth of delegation information using DELEG should be able to easily have Do53 delegations derived from it.
 
 
-* DELEG should be easily extensible, much like Extension Mechanisms for DNS {{?RFC6891}}, allowing for the incremental addition of new parameters without needing all of the heavy lifting that is expected for the initial deployment.
+* DELEG should be extensible and allow for the easy incremental addition of new delegation features after initial deployment.
 
 
 * DELEG should support an in-band means for the child to signal to the parent that parent-side records related to the child should be updated, akin to CDS/CDNSKEY {{?RFC8078}}.
