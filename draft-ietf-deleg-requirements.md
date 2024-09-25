@@ -95,14 +95,14 @@ The following strictures are necessary in a new delegation design.
 
 * DELEG must be backwards compatible with the existing ecosystem. Legacy zone data must function identically with both DELEG-aware and DELEG-unaware software. Nameserver (NS) records will continue to define the delegation of authority between a parent zone and a child zone exactly as they have.
 
-* DELEG must not negatively impact most DNS software.  This is intentionally a bit vague with regard to "most", because it can't be absolutely guaranteed for all possible DNS software on the network.  However, the working group should strive to test any proposed mechanism against a wide range of legacy software and come to a consensus as to what constitutes adherence to this requirement.
+* DELEG must not negatively impact most DNS software.  This is intentionally a bit vague with regard to "most", because it can't be absolutely guaranteed for all possible DNS software on the network.  However, the DNS community should strive to test any proposed mechanism against a wide range of legacy software and come to a consensus as to what constitutes adherence to this requirement.
 
 
-* DELEG must be able to secure delegations with DNSSEC.
+* DELEG must be able to secure delegations.
 
 * DELEG must support updates to delegation information with the same relative ease as currently exists with NS records.   Changes should take the same amount of time (eg, controlled by a DNS TTL) and allow a smooth transition between different operational platforms.
 
-* DELEG must be incrementally deployable and not require any sort of flag day of universal change to be effective.
+* DELEG must be incrementally deployable and not require any sort of flag day of universal change.
 
 * DELEG must allow multiple independent operators to simultaneously serve a zone.
 
