@@ -98,7 +98,7 @@ The following strictures are necessary in a new delegation design.
 * DELEG must not negatively impact most DNS software.  This is intentionally a bit vague with regard to "most", because it can't be absolutely guaranteed for all possible DNS software on the network.  However, the DNS community should strive to test any proposed mechanism against a wide range of legacy software and come to a consensus as to what constitutes adherence to this requirement.
 
 
-* DELEG must be able to secure delegations.
+* DELEG must be able to secure delegations with DNSSEC.
 
 * DELEG must support updates to delegation information with the same relative ease as currently exists with NS records.   Changes should take the same amount of time (eg, controlled by a DNS TTL) and allow a smooth transition between different operational platforms.
 
@@ -140,9 +140,11 @@ The following items are the aspirational goals for this work, describing the fea
 
 Several potential areas of requirement have been raised that are being explicitly acknowledged here as not being in the scope of this higher level document.
 
-* Whether NS records must continue to be the primary means by which resolutions happen
+* Whether NS records must continue to be the primary means by which resolutions happen.
 
-* Whether information for a new delegation mechanism is stored in at the zone name or elsewhere in the domain name hierarchy
+* Whether information for a new delegation mechanism is stored in at the zone name or elsewhere in the domain name hierarchy.
+
+* If a new delegation protocol is based on a DNS resource record, that record must not appear in both the parent and child with the same name and type.  The protocol should clearly describe how to handle an occurrence of that record appearing in the child.
 
 # IANA Considerations {#IANA}
 
