@@ -21,7 +21,7 @@ jobs:
 
     # See https://github.com/actions/checkout/issues/290
     - name: "Get Tag Annotations"
-      run: git fetch -f origin ${{ github.ref }}:${{ github.ref }}
+      run: git fetch -f origin ${{ github.ref }}:${{ github.ref }} --update-head-ok
 
     - name: "Setup"
       id: setup
