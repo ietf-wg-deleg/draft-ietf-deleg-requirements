@@ -79,7 +79,7 @@ The requirements constraining any proposed changes to DNS delegations fall broad
 \"Soft requirements\" are those that are desirable, but the absence of which does not intrinsically eliminate a design.  These will largely be descriptive of the problems that are trying to be addressed with a new method, or features that would ease adoption.
 
 
-The context used here will be for the Domain Name System as it exists under the IANA root and the Registry/Registrar/Registrant model {{?RFC9499}, and some conditions will only be relevant there. While it is expected that any design which satisfies the requirements of put forth here would be broadly applicable for any uses of the DNS outside of this environment, such uses are not in scope.
+The context used here will be for the Domain Name System as it exists under the IANA root and the Registry/Registrar/Registrant model {{?BCP219}}, and some conditions will only be relevant there. While it is expected that any design which satisfies the requirements of put forth here would be broadly applicable for any uses of the DNS outside of this environment, such uses are not in scope.
 
 
 ## Hard Requirements
