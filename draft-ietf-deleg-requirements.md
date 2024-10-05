@@ -67,10 +67,6 @@ zone operator:
 : The person or organization responsible for the nameserver which serves the zone
 
 
-service access point:
-: The network address tuple at which a zone is served
-
-
 # Requirements Framework
 
 
@@ -115,7 +111,7 @@ The following items are the aspirational goals for this work, describing the fea
 * DELEG should facilitate the use of new DNS transport mechanisms, including those already defined by DNS-over-TLS (DoT {{?RFC7858}}), DNS-over-HTTPS (DoH {{?RFC8484}}), and DNS-over-QUIC (DoQ {{?RFC9520}}).  It should easily allow the adoption of new transport mechanisms.
 
 
-* DELEG should make clear all of the necessary details for contacting a service access point -- its protocol, port, and any other data that would be required to initiate a DNS query.
+* DELEG should make clear all of the necessary details for contacting a service -- its protocol, port, and any other data that would be required to initiate a DNS query.
 
 
 * DELEG should minimize transaction cost in its usage.  This includes, but is not limited to, packet count, packet volume, and the amount of time it takes to resolve a query.
@@ -155,7 +151,7 @@ This memo includes no request to IANA.
 # Security Considerations {#Security}
 
 
-Updating the means by which DNS delegation information is communicated has tremendous implications for the security of the Internet.  This section will be made more robust in future drafts.  Contributions welcome.
+Updating the means by which DNS delegation information is communicated has tremendous implications for the security of the Internet.  There will security considerations that accompany proposed solutions.  This section will be made more robust in future drafts.  Contributions welcome.
 
 
 --- back
