@@ -87,20 +87,19 @@ The context used here will be for the Domain Name System as it exists under the 
 The following strictures are necessary in a new delegation design.
 
 
-* DELEG must not disrupt the existing registration model of domains.  Reservation of a name at a registry will still use the relevant registrar system to indicate the authorized registrant.
+* H1. DELEG must not disrupt the existing registration model of domains.
 
-* DELEG must be backwards compatible with the existing ecosystem. Legacy zone data must function identically with both DELEG-aware and DELEG-unaware software. Nameserver (NS) records will continue to define the delegation of authority between a parent zone and a child zone exactly as they have.
+* H2. DELEG must be backwards compatible with the existing ecosystem. Legacy zone data must function identically with both DELEG-aware and DELEG-unaware software. Nameserver (NS) records will continue to define the delegation of authority between a parent zone and a child zone exactly as they have.
 
-* DELEG must not negatively impact most DNS software.  This is intentionally a bit vague with regard to "most", because it can't be absolutely guaranteed for all possible DNS software on the network.  However, the DNS community should strive to test any proposed mechanism against a wide range of legacy software and come to a consensus as to what constitutes adherence to this requirement.
+* H3. DELEG must not negatively impact most DNS software.  This is intentionally a bit vague with regard to "most", because it can't be absolutely guaranteed for all possible DNS software on the network.  However, the DNS community should strive to test any proposed mechanism against a wide range of legacy software and come to a consensus as to what constitutes adherence to this requirement.
 
+* H4. DELEG must be able to secure delegations with DNSSEC.
 
-* DELEG must be able to secure delegations with DNSSEC.
+* H5. DELEG must support updates to delegation information with the same relative ease as currently exists with NS records.   Changes should take the same amount of time (eg, controlled by a DNS TTL) and allow a smooth transition between different operational platforms.
 
-* DELEG must support updates to delegation information with the same relative ease as currently exists with NS records.   Changes should take the same amount of time (eg, controlled by a DNS TTL) and allow a smooth transition between different operational platforms.
+* H6. DELEG must be incrementally deployable and not require any sort of flag day of universal change.
 
-* DELEG must be incrementally deployable and not require any sort of flag day of universal change.
-
-* DELEG must allow multiple independent operators to simultaneously serve a zone.
+* H7. DELEG must allow multiple independent operators to simultaneously serve a zone.
 
 ## Soft Requirements
 
@@ -108,28 +107,25 @@ The following strictures are necessary in a new delegation design.
 The following items are the aspirational goals for this work, describing the features that are desired beyond what current NS-based delegations provide.
 
 
-* DELEG should facilitate the use of new DNS transport mechanisms, including those already defined by DNS-over-TLS (DoT {{?RFC7858}}), DNS-over-HTTPS (DoH {{?RFC8484}}), and DNS-over-QUIC (DoQ {{?RFC9520}}).  It should easily allow the adoption of new transport mechanisms.
+* S1. DELEG should facilitate the use of new DNS transport mechanisms, including those already defined by DNS-over-TLS (DoT {{?RFC7858}}), DNS-over-HTTPS (DoH {{?RFC8484}}), and DNS-over-QUIC (DoQ {{?RFC9520}}).  It should easily allow the adoption of new transport mechanisms.
 
 
-* DELEG should make clear all of the necessary details for contacting a service -- its protocol, port, and any other data that would be required to initiate a DNS query.
+* S2. DELEG should make clear all of the necessary details for contacting a service -- its protocol, port, and any other data that would be required to initiate a DNS query.
 
 
-* DELEG should minimize transaction cost in its usage.  This includes, but is not limited to, packet count, packet volume, and the amount of time it takes to resolve a query.
+* S3. DELEG should minimize transaction cost in its usage.  This includes, but is not limited to, packet count, packet volume, and the amount of time it takes to resolve a query.
 
 
-* DELEG should enable a DNS operator to manage DNS service more completely on behalf of domain administrators. For example, DELEG could address long-standing issues of DNSSEC record maintenance that now often depend on registrant / registrar interaction. Similarly, DELEG could allow new transports to be deployed by an operator or nameserver names to be changed, without necessitating that delegation information be modified by the domain administrator.
+* S4. DELEG should simplify management of a zone's DNS service.
 
 
-* DELEG should allow for backward compatibility to the conventional NS-based delegation mechanism.  That is, a zone operator who wants to maintain a single source of truth of delegation information using DELEG should be able to easily have Do53 delegations derived from it.
+* S5. DELEG should allow for backward compatibility to the conventional NS-based delegation mechanism.  That is, a zone operator who wants to maintain a single source of truth of delegation information using DELEG should be able to easily have Do53 delegations derived from it.
 
 
-* DELEG should be extensible and allow for the easy incremental addition of new delegation features after initial deployment.
+* S6. DELEG should be extensible and allow for the easy incremental addition of new delegation features after initial deployment.
 
 
-* DELEG should support an in-band means for the child to signal to the parent that parent-side records related to the child should be updated, akin to CDS/CDNSKEY {{?RFC8078}}.
-
-
-* DELEG should be able to convey a security model for delegations stronger than currently exists with DNSSEC.
+* S7. DELEG should be able to convey a security model for delegations stronger than currently exists with DNSSEC.
 
 
 ## Non-Requirements
