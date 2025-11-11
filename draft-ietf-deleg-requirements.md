@@ -1,6 +1,6 @@
 ---
-title: "Problem Statement and Requirements for an Improved DNS Delegation Mechanism abbrev: DNS DELEG Requirements"
-abbrev: "DELEG Requirements "
+title: "Problem Statement and Requirements for an Improved DNS Delegation Mechanism"
+abbrev: "DELEG Requirements"
 category: info
 
 docname: draft-ietf-deleg-requirements-latest
